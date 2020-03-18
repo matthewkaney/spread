@@ -6,9 +6,6 @@
     # Install new version
     sudo git clone https://github.com/mindofmatthew/spread.git /usr/local/spread
 
-    # Make executable
-    sudo chmod +x /usr/local/spread/util/spread.sh
-
     # Set up symlink to spread script
     sudo ln -sf /usr/local/spread/util/spread.sh /usr/local/bin/spread
 }
