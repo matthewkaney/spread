@@ -6,7 +6,10 @@ sudo git pull --quiet
 cd - > /dev/null
 
 if [ -z "$1" ]
+then
+    # Script name is not provided
     echo "Test"
-elif
+else
+    # Script name is provided
     echo "Test... $1"
 fi
