@@ -1,4 +1,4 @@
-echo "Installing Node"
+#Install node.js via NVM
 
 #Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash

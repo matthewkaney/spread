@@ -1,4 +1,4 @@
-echo "Installing AWS Command Line Interface"
+#Install Amazon Web Services command line interface
 
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
