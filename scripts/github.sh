@@ -1,3 +1,5 @@
+#Clone GitHub repositories and set up GitHub SSH if necessary
+
 echo "Set up Git user info"
 
 if [ -z "$1" ]
