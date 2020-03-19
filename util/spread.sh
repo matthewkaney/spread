@@ -18,5 +18,6 @@ then
     done
 else
     # Script name is provided
-    echo "Test... $1"
+    echo "Running $1"
+    source /usr/local/spread/scripts/$1.sh
 fi
