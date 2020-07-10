@@ -31,4 +31,5 @@ sudo chmod 755 /etc/init.d/codeserver
 sudo update-rc.d codeserver defaults
 
 # Run Code Server
-/usr/local/bin/code-server --auth none --port 12000
+nohup /usr/local/bin/code-server --auth none --port 12000 &
+xdg-open "http://127.0.0.1:12000/"
