@@ -3,8 +3,8 @@
 # Delete build of Code Server
 sudo rm -rf /usr/local/codeserver
 
-# Get info for code-server 3.0.0
-URL="https://github.com/cdr/code-server/releases/download/3.1.1/code-server-3.1.1-linux-x86_64.tar.gz"
+# Get info for code-server 3.4.1
+URL="https://github.com/cdr/code-server/releases/download/v3.4.1/code-server-3.4.1-linux-amd64.tar.gz"
 
 BUNDLE=$(basename "$URL")
 FOLDER=${BUNDLE::-7}
@@ -15,15 +15,15 @@ tar xvf $BUNDLE
 rm $BUNDLE
 
 # Move files to bin folder
-sudo mkdir -p /usr/local/codeserver
-sudo mv $FOLDER/* /usr/local/codeserver
+sudo mkdir -p /usr/local/codeserver/$FOLDER
+sudo mv $FOLDER/* /usr/local/codeserver/$FOLDER
 rm -r $FOLDER
 
 # Replace assets
-cp /usr/local/spread/resources/codeserver/media/* /usr/local/codeserver/src/browser/media/
+cp /usr/local/spread/resources/codeserver/media/* /usr/local/codeserver/$FOLDER/src/browser/media/
 
 # Set up Symlink
-sudo ln -sf /usr/local/codeserver/code-server /usr/local/bin/code-server
+sudo ln -sf /usr/local/codeserver/$FOLDER/code-server /usr/local/bin/code-server
 
 # Create startup script
 sudo cp /usr/local/spread/resources/codeserver/startup.sh /etc/init.d/codeserver
