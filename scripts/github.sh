@@ -16,7 +16,7 @@ else
   NAME=$(git config user.name)
 fi
 
-if [ -f /usr/local/github-username ]
+if [ ! -f /usr/local/github-username ]
 then
   echo "Set up GitHub access"
 
@@ -31,11 +31,9 @@ then
   read -p "Copy the public key and press enter."
   xdg-open "https://github.com/settings/keys"
   read -p "Once you've added the SSH key, press enter."
-  ssh -T git@github.com
-  # TODO: Save username in a file
 fi
 
-if [ ! -z $2 ]
-then
-  # TODO: Allow user to clone repos
-fi
+# if [ ! -z $2 ]
+# then
+#   # TODO: Allow user to clone repos
+# fi
