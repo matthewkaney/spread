@@ -4,7 +4,7 @@
 sudo rm -rf /usr/local/codeserver
 
 # Get info for code-server 3.4.1
-URL="https://github.com/cdr/code-server/releases/download/v3.4.1/code-server-3.4.1-linux-amd64.tar.gz"
+URL="https://github.com/cdr/code-server/releases/download/v3.8.0/code-server-3.8.0-linux-amd64.tar.gz"
 
 BUNDLE=$(basename "$URL")
 FOLDER=${BUNDLE::-7}
